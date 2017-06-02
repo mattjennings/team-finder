@@ -74,6 +74,7 @@ let combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
   total[team.cityName] = team.abbreviation;
   total[team.teamName] = team.abbreviation;
   total[team.abbreviation] = team.abbreviation;
+  total[team.fullName] = team.abbreviation;
 
   if (team.terms.length > 0) {
     team.terms.forEach(function (term) {

@@ -15,6 +15,10 @@ class Team {
     return this._teamName;
   }
 
+  get fullName() {
+    return this._cityName + ' ' + this._teamName;
+  }
+
   get abbreviation() {
     return this._abbreviation;
   }
