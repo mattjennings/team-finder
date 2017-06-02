@@ -1,36 +1,38 @@
-var ANA = require('./ANA');
-var ARI = require('./ARI');
-var BOS = require('./BOS');
-var BUF = require('./BUF');
-var CAR = require('./CAR');
-var CBJ = require('./CBJ');
-var CGY = require('./CGY');
-var CHI = require('./CHI');
-var COL = require('./COL');
-var DAL = require('./DAL');
-var DET = require('./DET');
-var EDM = require('./EDM');
-var FLA = require('./FLA');
-var LAK = require('./LAK');
-var MIN = require('./MIN');
-var MTL = require('./MTL');
-var NJD = require('./NJD');
-var NSH = require('./NSH');
-var NYI = require('./NYI');
-var NYR = require('./NYR');
-var OTT = require('./OTT');
-var PHI = require('./PHI');
-var PIT = require('./PIT');
-var SJS = require('./SJS');
-var STL = require('./STL');
-var TBL = require('./TBL');
-var TOR = require('./TOR');
-var VAN = require('./VAN');
-var VGK = require('./VGK');
-var WPG = require('./WPG');
-var WSH = require('./WSH');
+let util = require('../util');
 
-var teams = {
+let ANA = require('./ANA');
+let ARI = require('./ARI');
+let BOS = require('./BOS');
+let BUF = require('./BUF');
+let CAR = require('./CAR');
+let CBJ = require('./CBJ');
+let CGY = require('./CGY');
+let CHI = require('./CHI');
+let COL = require('./COL');
+let DAL = require('./DAL');
+let DET = require('./DET');
+let EDM = require('./EDM');
+let FLA = require('./FLA');
+let LAK = require('./LAK');
+let MIN = require('./MIN');
+let MTL = require('./MTL');
+let NJD = require('./NJD');
+let NSH = require('./NSH');
+let NYI = require('./NYI');
+let NYR = require('./NYR');
+let OTT = require('./OTT');
+let PHI = require('./PHI');
+let PIT = require('./PIT');
+let SJS = require('./SJS');
+let STL = require('./STL');
+let TBL = require('./TBL');
+let TOR = require('./TOR');
+let VAN = require('./VAN');
+let VGK = require('./VGK');
+let WPG = require('./WPG');
+let WSH = require('./WSH');
+
+let teams = {
   ANA: ANA,
   ARI: ARI,
   BOS: BOS,
@@ -64,10 +66,10 @@ var teams = {
   WSH: WSH
 };
 
-// Creates a JSON object where the keys are various names and the values are the associated team abbreviation
+// Creates a JSON object where the keys are letious names and the values are the associated team abbreviation
 // ex. "Boston": "BOS"
-var combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
-  var team = teams[teamKey];
+let combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
+  let team = teams[teamKey];
 
   total[team.cityName] = team.abbreviation;
   total[team.teamName] = team.abbreviation;
@@ -81,15 +83,10 @@ var combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
   return total;
 }, {});
 
-console.log(combinedTerms)
-
 
 module.exports = {
-  getTeam: function(text) {
-    if (combinedTerms[text] !== undefined) {
-      return teams[combinedTerms[text]];
-    } else {
-      return null;
-    }
+  find: function(text, caseSensitive = true) {
+    let teamKey = caseSensitive ? combinedTerms[text] : combinedTerms.getByKeyInsensitive(text);
+    return teams[teamKey] !== undefined ? teams[teamKey] : null;
   }
 };
