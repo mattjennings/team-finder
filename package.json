@@ -1,6 +1,8 @@
 {
   "name": "team-finder",
   "version": "1.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/mattjennings/team-finder",
   "description": "Finds NHL teams based on given text",
   "main": "index.js",
   "scripts": {
