@@ -1,0 +1,16 @@
+{
+  "name": "nhl-team-identifier",
+  "version": "1.0.0",
+  "description": "Identifies NHL teams based on given text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nhl",
+    "team",
+    "identifier"
+  ],
+  "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
+  "license": "ISC"
+}
