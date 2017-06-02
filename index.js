@@ -1,1 +1,3 @@
-module.exports = require('./teams');
+let teams = require('./teams');
+
+module.exports = teams;

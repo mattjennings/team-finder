@@ -89,5 +89,11 @@ module.exports = {
   find: function(text, caseSensitive = true) {
     let teamKey = caseSensitive ? combinedTerms[text] : combinedTerms.getByKeyInsensitive(text);
     return teams[teamKey] !== undefined ? teams[teamKey] : null;
+  },
+  getAllTerms: function() {
+    return Object.keys(combinedTerms).reduce(function(total, term) {
+      total.push(term);
+      return total;
+    }, []);
   }
 };
