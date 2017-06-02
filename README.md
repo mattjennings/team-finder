@@ -4,7 +4,6 @@ Finds NHL teams that match the given term.
 
 Take a look at the [team files](/teams) to see the terms associated with each team. Usually it will be city name, team name, abbreviation, and other nicknames.
 
-
 ## Install
 
 ```
@@ -17,7 +16,6 @@ $ npm install team-finder
 var teamFinder = require('team-finder')
  
 teamFinder.find('Capitals').fullName // 'Washington Capitals'
-
 ```
 
 ## API
@@ -40,7 +38,6 @@ teamFinder.find('washington', false).teamName // 'Capitals'
 teamFinder.find('capitals', false).cityName // 'Washington'
 teamFinder.find('wsh', false).fullName // 'Washington Capitals'
 teamFinder.find('caps', false).abbreviation // 'WSH'
-
 ```
 
 ## Models
