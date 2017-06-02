@@ -1,3 +1,3 @@
-exports.printMsg = function() {
-  console.log("success");
-}
+var teams = require('./teams');
+
+console.log(teams.getTeam('ANA').cityName);
