@@ -40,6 +40,13 @@ teamFinder.find('wsh', false).fullName // 'Washington Capitals'
 teamFinder.find('caps', false).abbreviation // 'WSH'
 ```
 
+### Get All Terms
+.getAllTerms()
+
+#### Description
+
+Returns an array of all terms used by team-finder
+
 ## Models
 
 ### Team

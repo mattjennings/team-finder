@@ -1,5 +1,7 @@
 var Team = require('../classes/team');
 module.exports = new Team('Arizona', 'Coyotes', 'ARI', [
   'Phoenix',
-  'Yotes'
+  'Yotes',
+  'ARIZ',
+  'AZ'
 ]);
