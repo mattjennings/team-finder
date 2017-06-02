@@ -87,7 +87,7 @@ let combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
 
 module.exports = {
   find: function(text, caseSensitive = true) {
-    let teamKey = caseSensitive ? combinedTerms[text] : combinedTerms.getByKeyInsensitive(text);
+    let teamKey = caseSensitive ? combinedTerms[text] : util.getByKey(combinedTerms, text);
     return teams[teamKey] !== undefined ? teams[teamKey] : null;
   },
   getAllTerms: function() {
