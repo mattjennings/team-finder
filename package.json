@@ -1,7 +1,7 @@
 {
-  "name": "nhl-team-identifier",
+  "name": "team-finder",
   "version": "1.0.0",
-  "description": "Identifies NHL teams based on given text",
+  "description": "Finds NHL teams based on given text",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,6 +10,7 @@
   "keywords": [
     "nhl",
     "team",
+    "finder",
     "identifier"
   ],
   "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
