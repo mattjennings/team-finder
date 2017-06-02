@@ -20,12 +20,12 @@ teamFinder.find('Capitals').fullName // 'Washington Capitals'
 
 ```
 
-#API
+## API
 
-###Find
+### Find
 .find(term, caseSensitive = true)
 
-####Description
+#### Description
 Returns a Team object if a team is found, or null if not
 
 ```js
@@ -43,12 +43,12 @@ teamFinder.find('caps', false).abbreviation // 'WSH'
 
 ```
 
-#Models
+## Models
 
-##Team
+### Team
 Contains details of a team
 
-#####Properties
+#### Properties
 > cityName
 
 Name of the city (ex. "Washington")
