@@ -70,3 +70,6 @@ Abbreviation of the team (ex. "WSH")
 Array of other terms that the team might go by (ex. "Caps") 
 
 
+## License
+
+[MIT](/LICENSE)
