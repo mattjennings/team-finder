@@ -1,11 +1,2 @@
-module.exports = {
-  names : [
-    'Anaheim',
-    'Ducks',
-    'ANA'
-  ],
-  cityName: 'Anaheim',
-  teamName: 'Ducks',
-  fullName: 'Anaheim Ducks',
-  abbreviation: 'ANA'
-};
+var Team = require('../classes/team');
+module.exports = new Team('Anaheim', 'Ducks', 'ANA', []);

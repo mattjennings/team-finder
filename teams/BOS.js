@@ -1,12 +1,4 @@
-module.exports = {
-  names : [
-    'Boston',
-    'Bruins',
-    'Bears',
-    'BOS'
-  ],
-  cityName: 'Boston',
-  teamName: 'Bruins',
-  fullName: 'Boston Bruins',
-  abbreviation: 'BOS'
-};
+var Team = require('../classes/team');
+module.exports = new Team('Boston', 'Bruins', 'BOS', [
+  'Bears'
+]);
