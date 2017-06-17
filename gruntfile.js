@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'lib',
             src: ['**/*.js'],
-            dest: 'tmp/'
+            dest: 'dist/'
           }
         ]
       }
@@ -33,5 +33,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-babel');
 
-  grunt.registerTask('build', ['babel', 'uglify']);
+  grunt.registerTask('build', ['babel']);
 }
