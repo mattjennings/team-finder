@@ -1,5 +1,5 @@
 let assert = require('assert');
-var teamFinder = require('../index.js');
+var teamFinder = require('../lib/index.js');
 
 describe('find', function() {
   describe('Abbreviations', function() {

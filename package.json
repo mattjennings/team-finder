@@ -8,7 +8,7 @@
     "url": "https://github.com/mattjennings/team-finder"
   },
   "description": "Finds NHL teams based on given text",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "node index.js",
     "test": "mocha"
@@ -26,8 +26,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
-    "grunt-contrib-uglify": "^3.0.1",
-    "mocha": "^3.4.2",
-    "uglify-js": "^3.0.17"
+    "mocha": "^3.4.2"
   }
 }

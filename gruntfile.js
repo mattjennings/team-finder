@@ -12,25 +12,15 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'lib',
+            cwd: 'src',
             src: ['**/*.js'],
-            dest: 'dist/'
+            dest: 'lib/'
           }
         ]
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'tmp/**/*.js',
-        dest: 'dist/index.min.js'
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-babel');
 
   grunt.registerTask('build', ['babel']);
