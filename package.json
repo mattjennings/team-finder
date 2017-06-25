@@ -11,6 +11,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "grunt build",
+    "postbuild": "npm test",
     "test": "mocha"
   },
   "keywords": [
