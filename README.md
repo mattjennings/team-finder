@@ -63,7 +63,7 @@ Name of the team (ex. "Capitals")
 
 > fullName
 
-cityName and fullName together (ex. "Washington Capitals")
+cityName and teamName together (ex. "Washington Capitals")
 
 > abbreviation
 
