@@ -95,5 +95,8 @@ module.exports = {
       total.push(term);
       return total;
     }, []);
+  },
+  getAllTeams: function() {
+    return teams;
   }
 };

@@ -10,7 +10,7 @@
   "description": "Finds NHL teams based on given text",
   "main": "lib/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "build": "grunt build",
     "postbuild": "npm test",
     "test": "mocha"
