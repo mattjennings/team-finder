@@ -44,4 +44,10 @@ describe('find', function() {
       })
     })
   })
+
+  describe('Get all teams', function() {
+    it('should get Anaheim', function() {
+      assert.equal('Anaheim', teamFinder.getAllTeams().ANA.cityName)
+    })
+  })
 });

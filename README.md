@@ -45,7 +45,18 @@ teamFinder.find('caps', false).abbreviation // 'WSH'
 
 #### Description
 
-Returns an array of all terms used by team-finder
+Returns an object containing all teams with abbreviations as the key
+
+```js
+teamFinder.getAllTeams().ANA.cityName // 'Anaheim'
+teamFinder.getAllTeams().BOS.fullName // 'Boston Bruins'
+```
+
+### Get All Teams
+
+#### Description
+
+Returns an array of all team
 
 ## Models
 
