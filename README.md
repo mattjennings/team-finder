@@ -40,8 +40,8 @@ teamFinder.find('wsh', false).fullName // 'Washington Capitals'
 teamFinder.find('caps', false).abbreviation // 'WSH'
 ```
 
-### Get All Terms
-.getAllTerms()
+### Get All Teams
+.getAllTeams()
 
 #### Description
 
@@ -52,11 +52,12 @@ teamFinder.getAllTeams().ANA.cityName // 'Anaheim'
 teamFinder.getAllTeams().BOS.fullName // 'Boston Bruins'
 ```
 
-### Get All Teams
+### Get All Terms
+.getAllTerms()
 
 #### Description
 
-Returns an array of all team
+Returns an array of all terms used to identify teams
 
 ## Models
 
