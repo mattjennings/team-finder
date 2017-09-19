@@ -14,6 +14,13 @@ describe('find', function() {
         assert.equal('BOS', teamFinder.find('bruins', false).abbreviation);
       })
     })
+
+    describe('Minnesota', function() {
+      it('should return MIN', function() {
+        let team = teamFinder.find('mnwild', false)
+        assert.equal('MIN', team.abbreviation);
+      })
+    })
   })
 
   describe('City names', function() {
