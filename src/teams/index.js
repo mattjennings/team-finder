@@ -66,7 +66,7 @@ let teams = {
   WSH: WSH
 };
 
-// Creates a JSON object where the keys are letious names and the values are the associated team abbreviation
+// Creates a JSON object where the keys are terms/names and the values are the associated team abbreviation
 // ex. "Boston": "BOS"
 let combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
   let team = teams[teamKey];

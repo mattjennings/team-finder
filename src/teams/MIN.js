@@ -1,4 +1,5 @@
 var Team = require('../classes/team');
 module.exports = new Team('Minnesota', 'Wild', 'MIN', [
-  'Minny'
+  'minny',
+  'mnwild',
 ]);
