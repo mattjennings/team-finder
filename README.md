@@ -93,6 +93,13 @@ Abbreviation of the team (ex. "WSH")
 
 Array of other terms that the team might go by (ex. "Caps")
 
+> primaryColor
+
+Primary color of the team as a hex value
+
+> textColor
+
+If you wanted to use the primary color as a background with text on it, this will have the appropriate text color for it (either black or white)
 
 ## License
 
