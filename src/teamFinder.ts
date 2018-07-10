@@ -148,7 +148,7 @@ const teams: { [key: string]: Team } = {
   NYI: new Team({
     cityName: 'New York',
     teamName: 'Islanders',
-    abbreviation: 'CHI',
+    abbreviation: 'NYI',
     primaryColor: '#003087',
     textColor: '#FFFFFF',
     terms: ['Isles', 'Island']
