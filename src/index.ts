@@ -1,3 +1,3 @@
-import * as teamFinder from  './teams'
+import * as teamFinder from './teamFinder'
 
 export default teamFinder

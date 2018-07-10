@@ -14,14 +14,22 @@ $ npm install team-finder
 
 ```js
 var teamFinder = require('team-finder')
- 
+
+teamFinder.find('Capitals').fullName // 'Washington Capitals'
+```
+
+or
+
+```js
+import teamFinder from 'team-finder'
+
 teamFinder.find('Capitals').fullName // 'Washington Capitals'
 ```
 
 ## API
 
-### Find
-.find(term, caseSensitive = true)
+### Find Team
+.findTeam(term, caseSensitive = true)
 
 #### Description
 Returns a Team object if a team is found, or null if not
@@ -32,7 +40,7 @@ teamFinder.find('Washington').teamName // 'Capitals'
 teamFinder.find('Capitals').cityName // 'Washington'
 teamFinder.find('WSH').fullName // 'Washington Capitals'
 teamFinder.find('Caps').abbreviation // 'WSH'
- 
+
 // Case insensitive
 teamFinder.find('washington', false).teamName // 'Capitals'
 teamFinder.find('capitals', false).cityName // 'Washington'
@@ -83,7 +91,7 @@ Abbreviation of the team (ex. "WSH")
 
 > terms
 
-Array of other terms that the team might go by (ex. "Caps") 
+Array of other terms that the team might go by (ex. "Caps")
 
 
 ## License

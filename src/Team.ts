@@ -1,33 +1,36 @@
 export default class Team {
-  private _cityName: string
-  private _teamName: string
-  private _abbreviation: string
-  private _terms: string[]
+  public cityName: string
+  public teamName: string
+  public abbreviation: string
+  public terms: string[]
 
-  constructor(cityName, teamName, abbreviation, terms) {
-    this._cityName = cityName
-    this._teamName = teamName
-    this._abbreviation = abbreviation
-    this._terms = terms
-  }
+  public primaryColor: string
+  public textColor: string
 
-  get cityName() {
-    return this._cityName
-  }
-
-  get teamName() {
-    return this._teamName
+  constructor({
+    cityName,
+    teamName,
+    abbreviation,
+    terms,
+    primaryColor,
+    textColor
+  }: {
+    cityName: string
+    teamName: string
+    abbreviation: string
+    terms?: string[]
+    primaryColor: string
+    textColor: string
+  }) {
+    this.cityName = cityName
+    this.teamName = teamName
+    this.abbreviation = abbreviation
+    this.terms = terms || []
+    this.primaryColor = primaryColor
+    this.textColor = textColor
   }
 
   get fullName() {
-    return this._cityName + ' ' + this._teamName
-  }
-
-  get abbreviation() {
-    return this._abbreviation
-  }
-
-  get terms() {
-    return this._terms
+    return this.cityName + ' ' + this.teamName
   }
 }

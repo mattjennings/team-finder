@@ -1,4 +1,4 @@
-import teamFinder from '../lib/main/index.js'
+import teamFinder from '../src'
 
 describe('find', () => {
   describe('Abbreviations', () => {
