@@ -1,1 +1,6 @@
 /src/
+/__tests__
+tsconfig.*.json
+tsconfig.json
+tslint.json
+yarn.lock
