@@ -2,7 +2,7 @@ export default class Team {
   private _cityName: string
   private _teamName: string
   private _abbreviation: string
-  private _terms: string
+  private _terms: string[]
 
   constructor(cityName, teamName, abbreviation, terms) {
     this._cityName = cityName

@@ -8,12 +8,15 @@
     "url": "https://github.com/mattjennings/team-finder"
   },
   "description": "Finds NHL teams based on given text",
-  "main": "lib/index.js",
+  "main": "lib/main/index.js",
+  "typings": "lib/main/index.d.ts",
+  "module": "lib/module/index.js",
   "scripts": {
     "build": "npm run clean && npm run build:main && npm run build:module && npm run babel",
     "build:main": "tsc -p tsconfig.build.json",
     "build:module": "tsc -p tsconfig.module.json",
-    "babel": "babel lib --out-dir lib --extensions \".js\""
+    "babel": "babel lib --out-dir lib --extensions \".js\"",
+    "clean": "trash lib"
   },
   "keywords": [
     "nhl",
@@ -39,6 +42,7 @@
   "devDependencies": {
     "@types/jest": "^23.1.1",
     "@types/node": "^10.3.4",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",

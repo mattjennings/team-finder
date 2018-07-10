@@ -1,5 +1,5 @@
-import Team from '../Team'
 import * as util from '../util'
+import Team from '../Team'
 
 import ANA from './ANA'
 import ARI from './ARI'
@@ -33,7 +33,7 @@ import VGK from './VGK'
 import WPG from './WPG'
 import WSH from './WSH'
 
-const teams = {
+const teams: { [key: string]: Team } = {
   ANA,
   ARI,
   BOS,
@@ -85,7 +85,7 @@ const combinedTerms = Object.keys(teams).reduce(function(total, teamKey) {
   return total
 }, {})
 
-export const find = (text: string, caseSensitive: boolean = true): typeof teams | null => {
+export const find = (text: string, caseSensitive: boolean = true) => {
   const teamKey = caseSensitive ? combinedTerms[text] : util.getByKey(combinedTerms, text)
   return teams[teamKey] !== undefined ? teams[teamKey] : null
 }

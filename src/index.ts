@@ -1,3 +1,3 @@
-import teams from './teams'
+import * as teamFinder from  './teams'
 
-export default teams
+export default teamFinder
