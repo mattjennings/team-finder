@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules",
+    "tslint-plugin-prettier",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "interface-name": false,
+    "eofline": false,
+    "jsx-boolean-value": false,
+    "variable-name": false,
+    "prettier": [
+      true,
+      {
+        "semi": false,
+        "trailingComma": "none",
+        "tabWidth": 2,
+        "printWidth": 120,
+        "singleQuote": true,
+        "parser": "typescript"
+      }
+    ]
+  }
+}

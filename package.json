@@ -1,6 +1,6 @@
 {
   "name": "team-finder",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "license": "ISC",
   "homepage": "https://github.com/mattjennings/team-finder",
   "repository": {
@@ -8,12 +8,15 @@
     "url": "https://github.com/mattjennings/team-finder"
   },
   "description": "Finds NHL teams based on given text",
-  "main": "lib/index.js",
+  "main": "lib/main/index.js",
+  "typings": "lib/main/index.d.ts",
+  "module": "lib/module/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "grunt build",
-    "postbuild": "npm test",
-    "test": "mocha"
+    "build": "npm run clean && npm run build:main && npm run build:module && npm run babel",
+    "build:main": "tsc -p tsconfig.build.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "babel": "babel lib --out-dir lib --extensions \".js\"",
+    "clean": "trash lib"
   },
   "keywords": [
     "nhl",
@@ -22,12 +25,35 @@
     "identifier"
   ],
   "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "grunt": "^1.0.1",
-    "grunt-babel": "^6.0.0",
-    "mocha": "^3.4.2"
+    "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.4",
+    "trash-cli": "^1.4.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typescript": "2.7.2"
   }
 }
