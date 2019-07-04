@@ -28,8 +28,8 @@ teamFinder.find('Capitals').fullName // 'Washington Capitals'
 
 ## API
 
-### Find Team
-.findTeam(term, caseSensitive = true)
+### Find
+.find(term, caseSensitive = true)
 
 #### Description
 Returns a Team object if a team is found, or null if not
