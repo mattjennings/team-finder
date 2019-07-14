@@ -1,3 +1,5 @@
-import * as teamFinder from './teamFinder'
+export { default as teamDictionary } from './teamDictionary'
+export { default as findTeam } from './findTeam'
+export { default as teams } from './teams'
 
-export default teamFinder
+export * from './teams'

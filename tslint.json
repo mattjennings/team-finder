@@ -10,16 +10,6 @@
     "eofline": false,
     "jsx-boolean-value": false,
     "variable-name": false,
-    "prettier": [
-      true,
-      {
-        "semi": false,
-        "trailingComma": "none",
-        "tabWidth": 2,
-        "printWidth": 120,
-        "singleQuote": true,
-        "parser": "typescript"
-      }
-    ]
+    "object-literal-sort-keys": false
   }
 }
