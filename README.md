@@ -20,9 +20,7 @@ findTeam('Capitals').fullName // 'Washington Capitals'
 
 ## API
 
-### findTeam
-
-#### Description
+#### findTeam
 
 Returns a [Team](/src/teams.ts) if a team is found, or null if not
 
@@ -42,9 +40,7 @@ findTeam('wsh', { caseSensitive: false }).fullName // 'Washington Capitals'
 findTeam('caps', { caseSensitive: false }).abbreviation // 'WSH'
 ```
 
-### teams
-
-#### Description
+#### teams
 
 Returns an object containing all teams with abbreviations as the key
 
@@ -55,9 +51,7 @@ teams.ANA.cityName // 'Anaheim'
 teams.BOS.fullName // 'Boston Bruins'
 ```
 
-### teamDictionary
-
-#### Description
+#### teamDictionary
 
 A javascript object where the keys are terms (and social media info) and the values are team abbreviations. `findTeam` uses this under the hood, but you can use this if you need to pass the data somewhere else.
 
