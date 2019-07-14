@@ -1,4 +1,47 @@
-import * as util from './util'
+export interface Team {
+  /**
+   * Name of city the team belongs to
+   */
+  cityName: string
+
+  /**
+   * Name of team
+   */
+  teamName: string
+
+  /**
+   * Name of city + team
+   */
+  fullName: string
+
+  /**
+   * Abbreviation for the team
+   */
+  abbreviation: NHLTeamAbbreviation
+
+  /**
+   * Primary color of the team
+   */
+  primaryColor: string
+
+  /**
+   * A contrasting color to primaryColor for text
+   */
+  textColor: string
+
+  /**
+   * Other terms the team might go by
+   */
+  terms?: string[]
+
+  /**
+   * Social media information for the team
+   */
+  socialMedia?: {
+    twitter?: string
+    hashTags?: string[]
+  }
+}
 
 export type NHLTeamAbbreviation =
   | 'ANA'
@@ -32,20 +75,6 @@ export type NHLTeamAbbreviation =
   | 'VGK'
   | 'WPG'
   | 'WSH'
-
-export interface Team {
-  cityName: string
-  teamName: string
-  fullName: string
-  abbreviation: string
-  primaryColor: string
-  textColor: string
-  terms?: string[]
-  socialMedia?: {
-    twitter?: string
-    hashTags?: string[]
-  }
-}
 
 export type Teams = Record<NHLTeamAbbreviation, Team>
 
@@ -454,52 +483,4 @@ const teams: Teams = {
   }
 }
 
-// Creates a JSON object where the keys are terms/names and the values are the associated team abbreviation
-// ex. "Boston": "BOS"
-const combinedTerms = Object.keys(teams).reduce((total, teamKey) => {
-  const team = teams[teamKey]
-
-  total[team.cityName] = team.abbreviation
-  total[team.teamName] = team.abbreviation
-  total[team.abbreviation] = team.abbreviation
-  total[team.fullName] = team.abbreviation
-
-  if (team.terms && team.terms.length > 0) {
-    team.terms.forEach(term => {
-      total[term] = team.abbreviation
-    })
-  }
-  return total
-}, {})
-
-/**
- * Finds a team by a key word or words
- * @param text The city name, team name, abbreviation, or a term associated with the team.
- * @param caseSensitive if true, the search will be done case sensitively (example: "VAN" will return the Vancouver Canucks, but "van" will not)
- */
-export const findTeam = (text: string, caseSensitive: boolean = true) => {
-  const teamKey = caseSensitive
-    ? combinedTerms[text]
-    : util.getByKey(combinedTerms, text)
-  return teams[teamKey] !== undefined ? teams[teamKey] : null
-}
-
-/**
- * Deprecated. Use findTeam
- */
-export const find = findTeam
-
-/**
- * Get all terms used to identify teams
- */
-export const getAllTerms = () => {
-  return Object.keys(combinedTerms).reduce(
-    (total, term) => {
-      total.push(term)
-      return total
-    },
-    [] as string[]
-  )
-}
-
-export const getAllTeams = () => teams
+export default teams

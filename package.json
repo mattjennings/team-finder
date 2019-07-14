@@ -8,16 +8,21 @@
     "url": "https://github.com/mattjennings/team-finder"
   },
   "description": "Finds NHL teams based on given text",
-  "main": "lib/main/index.js",
-  "typings": "lib/main/index.d.ts",
-  "module": "lib/module/index.js",
+  "main": "dist/index.js",
+  "module": "dist/testlib.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run clean && npm run build:main && npm run build:module && npm run babel",
-    "build:main": "tsc -p tsconfig.build.json",
-    "build:module": "tsc -p tsconfig.module.json",
-    "babel": "babel lib --out-dir lib --extensions \".js\"",
-    "clean": "rimraf lib",
-    "test": "jest"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "keywords": [
     "nhl",
@@ -27,19 +32,23 @@
   ],
   "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.2",
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
     "jest": "^24.8.0",
+    "husky": "^3.0.0",
     "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "tsdx": "^0.7.2",
+    "tslib": "^1.10.0"
   }
 }

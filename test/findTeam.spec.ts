@@ -1,22 +1,24 @@
-import teamFinder from '../src'
+import { findTeam } from '../src'
 
-describe('find', () => {
+describe('findTeam', () => {
   describe('Abbreviations', () => {
     describe('Anaheim', () => {
       it('should return ANA', () => {
-        expect(teamFinder.find('Ducks').abbreviation).toEqual('ANA')
+        expect(findTeam('Ducks').abbreviation).toEqual('ANA')
       })
     })
 
     describe('Boston', () => {
       it('should return BOS', () => {
-        expect(teamFinder.find('bruins', false).abbreviation).toEqual('BOS')
+        expect(
+          findTeam('bruins', { caseSensitive: false }).abbreviation
+        ).toEqual('BOS')
       })
     })
 
     describe('Minnesota', () => {
       it('should return MIN', () => {
-        const team = teamFinder.find('mnwild', false)
+        const team = findTeam('mnwild', { caseSensitive: false })
         expect(team.abbreviation).toEqual('MIN')
       })
     })
@@ -25,13 +27,15 @@ describe('find', () => {
   describe('City names', () => {
     describe('Chicago', () => {
       it('should return Chicago', () => {
-        expect(teamFinder.find('Blackhawks').cityName).toEqual('Chicago')
+        expect(findTeam('Blackhawks').cityName).toEqual('Chicago')
       })
     })
 
     describe('Dallas', () => {
       it('should return Dallas', () => {
-        expect(teamFinder.find('stars', false).cityName).toEqual('Dallas')
+        expect(findTeam('stars', { caseSensitive: false }).cityName).toEqual(
+          'Dallas'
+        )
       })
     })
   })
@@ -39,20 +43,16 @@ describe('find', () => {
   describe('Team names', () => {
     describe('Columbus', () => {
       it('should return Blue Jackets', () => {
-        expect(teamFinder.find('Columbus').teamName).toEqual('Blue Jackets')
+        expect(findTeam('Columbus').teamName).toEqual('Blue Jackets')
       })
     })
 
     describe('Colorado', () => {
       it('should return Avalanche', () => {
-        expect(teamFinder.find('avalanche', false).teamName).toEqual('Avalanche')
+        expect(
+          findTeam('avalanche', { caseSensitive: false }).teamName
+        ).toEqual('Avalanche')
       })
-    })
-  })
-
-  describe('Get all teams', () => {
-    it('should get Anaheim', () => {
-      expect(teamFinder.getAllTeams().ANA.cityName).toEqual('Anaheim')
     })
   })
 })

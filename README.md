@@ -13,91 +13,59 @@ $ npm install team-finder
 ## Usage
 
 ```js
-import teamFinder from "team-finder";
+import { findTeam } from 'team-finder'
 
-teamFinder.find("Capitals").fullName; // 'Washington Capitals'
+findTeam('Capitals').fullName // 'Washington Capitals'
 ```
 
 ## API
 
-### Find
-
-.find(term, caseSensitive = true)
+### findTeam(term, caseSensitive = true)
 
 #### Description
 
-Returns a Team object if a team is found, or null if not
+Returns a [Team](/src/teams.ts) if a team is found, or null if not
 
 ```js
+import { findTeam } from 'team-finder'
+
 // Case sensitive
-teamFinder.find("Washington").teamName; // 'Capitals'
-teamFinder.find("Capitals").cityName; // 'Washington'
-teamFinder.find("WSH").fullName; // 'Washington Capitals'
-teamFinder.find("Caps").abbreviation; // 'WSH'
+findTeam('Washington').teamName // 'Capitals'
+findTeam('Capitals').cityName // 'Washington'
+findTeam('WSH').fullName // 'Washington Capitals'
+findTeam('Caps').abbreviation // 'WSH'
 
 // Case insensitive
-teamFinder.find("washington", false).teamName; // 'Capitals'
-teamFinder.find("capitals", false).cityName; // 'Washington'
-teamFinder.find("wsh", false).fullName; // 'Washington Capitals'
-teamFinder.find("caps", false).abbreviation; // 'WSH'
+findTeam('washington', { caseSensitive: false }).teamName // 'Capitals'
+findTeam('capitals', { caseSensitive: false }).cityName // 'Washington'
+findTeam('wsh', { caseSensitive: false }).fullName // 'Washington Capitals'
+findTeam('caps', { caseSensitive: false }).abbreviation // 'WSH'
 ```
 
-### Get All Teams
-
-.getAllTeams()
+### teams
 
 #### Description
 
 Returns an object containing all teams with abbreviations as the key
 
 ```js
-teamFinder.getAllTeams().ANA.cityName; // 'Anaheim'
-teamFinder.getAllTeams().BOS.fullName; // 'Boston Bruins'
+import { teams } from 'team-finder'
+
+teams.ANA.cityName // 'Anaheim'
+teams.BOS.fullName // 'Boston Bruins'
 ```
 
-### Get All Terms
-
-.getAllTerms()
+### allTerms
 
 #### Description
 
-Returns an array of all terms used to identify teams
+A javascript object where the keys are terms and the values are team abbreviations
 
-## Models
+```js
+import { allTerms } from 'team-finder'
 
-### Team
-
-Contains details of a team
-
-#### Properties
-
-> cityName
-
-Name of the city (ex. "Washington")
-
-> teamName
-
-Name of the team (ex. "Capitals")
-
-> fullName
-
-cityName and teamName together (ex. "Washington Capitals")
-
-> abbreviation
-
-Abbreviation of the team (ex. "WSH")
-
-> terms
-
-Array of other terms that the team might go by (ex. "Caps")
-
-> primaryColor
-
-Primary color of the team as a hex value
-
-> textColor
-
-If you wanted to use the primary color as a background with text on it, this will have the appropriate text color for it (either black or white)
+allTerms['Caps'] // 'WSH'
+```
 
 ## License
 
