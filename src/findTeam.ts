@@ -1,6 +1,6 @@
 import * as util from './util'
 import teams, { NHLTeamAbbreviation } from './teams'
-import allTerms from './allTerms'
+import teamDictionary from './teamDictionary'
 
 export interface FindTeamOptions {
   caseSensitive?: boolean
@@ -13,8 +13,8 @@ export interface FindTeamOptions {
 export default function findTeam(text: string, options: FindTeamOptions = {}) {
   const { caseSensitive = true } = options
   const teamKey: NHLTeamAbbreviation = caseSensitive
-    ? allTerms[text]
-    : util.getByKey(allTerms, text)
+    ? teamDictionary[text]
+    : util.getByKey(teamDictionary, text)
 
   return teams[teamKey] !== undefined ? teams[teamKey] : null
 }

@@ -1,6 +1,8 @@
 import teams, { NHLTeamAbbreviation } from './teams'
 
-const allTerms = (Object.keys(teams) as NHLTeamAbbreviation[]).reduce(
+export type TeamDictionary = Record<string, NHLTeamAbbreviation>
+
+const teamDictionary = (Object.keys(teams) as NHLTeamAbbreviation[]).reduce(
   (total, teamKey) => {
     const team = teams[teamKey]
 
@@ -28,7 +30,7 @@ const allTerms = (Object.keys(teams) as NHLTeamAbbreviation[]).reduce(
     }
     return total
   },
-  {} as Record<string, NHLTeamAbbreviation>
+  {} as TeamDictionary
 )
 
-export default allTerms
+export default teamDictionary

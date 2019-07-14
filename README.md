@@ -55,16 +55,17 @@ teams.ANA.cityName // 'Anaheim'
 teams.BOS.fullName // 'Boston Bruins'
 ```
 
-### allTerms
+### teamDictionary
 
 #### Description
 
-A javascript object where the keys are terms and the values are team abbreviations
+A javascript object where the keys are terms (and social media info) and the values are team abbreviations. `findTeam` uses this under the hood, but you can use this if you need to pass the data somewhere else.
 
 ```js
-import { allTerms } from 'team-finder'
+import { teamDictionary } from 'team-finder'
 
-allTerms['Caps'] // 'WSH'
+teamDictionary['Caps'] // 'WSH'
+teamDictionary['@FlaPanthers'] // 'FLA'
 ```
 
 ## License
