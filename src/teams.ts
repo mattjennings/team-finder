@@ -384,10 +384,10 @@ const teams: Teams = {
     abbreviation: 'SJS',
     primaryColor: '#006272',
     textColor: '#FFFFFF',
-    terms: ['SJSharks'],
+    terms: [],
     socialMedia: {
       twitter: '@SanJoseSharks',
-      hashTags: []
+      hashTags: ['#SJSharks']
     }
   },
   STL: {
