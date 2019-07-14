@@ -14,6 +14,18 @@ const allTerms = (Object.keys(teams) as NHLTeamAbbreviation[]).reduce(
         total[term] = team.abbreviation
       })
     }
+
+    if (team.socialMedia) {
+      if (team.socialMedia.twitter) {
+        total[team.socialMedia.twitter] = team.abbreviation
+      }
+
+      if (team.socialMedia.hashTags) {
+        team.socialMedia.hashTags.forEach(hashTag => {
+          total[hashTag] = team.abbreviation
+        })
+      }
+    }
     return total
   },
   {} as Record<string, NHLTeamAbbreviation>
