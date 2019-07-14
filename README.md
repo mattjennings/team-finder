@@ -13,42 +13,37 @@ $ npm install team-finder
 ## Usage
 
 ```js
-var teamFinder = require('team-finder')
+import teamFinder from "team-finder";
 
-teamFinder.find('Capitals').fullName // 'Washington Capitals'
-```
-
-or
-
-```js
-import teamFinder from 'team-finder'
-
-teamFinder.find('Capitals').fullName // 'Washington Capitals'
+teamFinder.find("Capitals").fullName; // 'Washington Capitals'
 ```
 
 ## API
 
 ### Find
+
 .find(term, caseSensitive = true)
 
 #### Description
+
 Returns a Team object if a team is found, or null if not
 
 ```js
 // Case sensitive
-teamFinder.find('Washington').teamName // 'Capitals'
-teamFinder.find('Capitals').cityName // 'Washington'
-teamFinder.find('WSH').fullName // 'Washington Capitals'
-teamFinder.find('Caps').abbreviation // 'WSH'
+teamFinder.find("Washington").teamName; // 'Capitals'
+teamFinder.find("Capitals").cityName; // 'Washington'
+teamFinder.find("WSH").fullName; // 'Washington Capitals'
+teamFinder.find("Caps").abbreviation; // 'WSH'
 
 // Case insensitive
-teamFinder.find('washington', false).teamName // 'Capitals'
-teamFinder.find('capitals', false).cityName // 'Washington'
-teamFinder.find('wsh', false).fullName // 'Washington Capitals'
-teamFinder.find('caps', false).abbreviation // 'WSH'
+teamFinder.find("washington", false).teamName; // 'Capitals'
+teamFinder.find("capitals", false).cityName; // 'Washington'
+teamFinder.find("wsh", false).fullName; // 'Washington Capitals'
+teamFinder.find("caps", false).abbreviation; // 'WSH'
 ```
 
 ### Get All Teams
+
 .getAllTeams()
 
 #### Description
@@ -56,11 +51,12 @@ teamFinder.find('caps', false).abbreviation // 'WSH'
 Returns an object containing all teams with abbreviations as the key
 
 ```js
-teamFinder.getAllTeams().ANA.cityName // 'Anaheim'
-teamFinder.getAllTeams().BOS.fullName // 'Boston Bruins'
+teamFinder.getAllTeams().ANA.cityName; // 'Anaheim'
+teamFinder.getAllTeams().BOS.fullName; // 'Boston Bruins'
 ```
 
 ### Get All Terms
+
 .getAllTerms()
 
 #### Description
@@ -70,9 +66,11 @@ Returns an array of all terms used to identify teams
 ## Models
 
 ### Team
+
 Contains details of a team
 
 #### Properties
+
 > cityName
 
 Name of the city (ex. "Washington")
