@@ -100,8 +100,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Phoenix', 'Yotes', 'ARIZ', 'AZ', '@ArizonaCoyotes'],
     socialMedia: {
-      twitter: '@ArizonaCoyotes',
-      hashTags: []
+      twitter: '@ArizonaCoyotes'
     }
   },
   BOS: {
@@ -139,8 +138,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Canes'],
     socialMedia: {
-      twitter: '@NHLCanes',
-      hashTags: []
+      twitter: '@NHLCanes'
     }
   },
   CBJ: {
@@ -165,8 +163,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['CAL'],
     socialMedia: {
-      twitter: '@NHLFlames',
-      hashTags: []
+      twitter: '@NHLFlames'
     }
   },
   CHI: {
@@ -191,8 +188,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: [],
     socialMedia: {
-      twitter: '',
-      hashTags: []
+      twitter: ''
     }
   },
   DAL: {
@@ -204,8 +200,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Hawks'],
     socialMedia: {
-      twitter: '@DallasStars',
-      hashTags: []
+      twitter: '@DallasStars'
     }
   },
   DET: {
@@ -256,8 +251,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['LA', 'LA Kings', 'LAKings'],
     socialMedia: {
-      twitter: '@LAKings',
-      hashTags: []
+      twitter: '@LAKings'
     }
   },
   MIN: {
@@ -334,8 +328,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Rags'],
     socialMedia: {
-      twitter: '@NYRangers',
-      hashTags: []
+      twitter: '@NYRangers'
     }
   },
   OTT: {
@@ -347,8 +340,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Sens'],
     socialMedia: {
-      twitter: '@Senators',
-      hashTags: []
+      twitter: '@Senators'
     }
   },
   PHI: {
@@ -360,8 +352,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: [],
     socialMedia: {
-      twitter: '@NHLFlyers',
-      hashTags: []
+      twitter: '@NHLFlyers'
     }
   },
   PIT: {
