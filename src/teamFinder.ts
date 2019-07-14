@@ -199,7 +199,7 @@ const teams: { [key: string]: Team } = {
     abbreviation: 'STL',
     primaryColor: '#003087',
     textColor: '#FFFFFF',
-    terms: ['Notes']
+    terms: ['Notes', 'St Louis Blues']
   }),
   TBL: new Team({
     cityName: 'Tampa Bay',
@@ -275,7 +275,9 @@ const combinedTerms = Object.keys(teams).reduce((total, teamKey) => {
  * @param caseSensitive if true, the search will be done case sensitively (example: "VAN" will return the Vancouver Canucks, but "van" will not)
  */
 export const findTeam = (text: string, caseSensitive: boolean = true) => {
-  const teamKey = caseSensitive ? combinedTerms[text] : util.getByKey(combinedTerms, text)
+  const teamKey = caseSensitive
+    ? combinedTerms[text]
+    : util.getByKey(combinedTerms, text)
   return teams[teamKey] !== undefined ? teams[teamKey] : null
 }
 
