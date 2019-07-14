@@ -20,7 +20,7 @@ findTeam('Capitals').fullName // 'Washington Capitals'
 
 ## API
 
-### findTeam(term, caseSensitive = true)
+### findTeam
 
 #### Description
 
