@@ -88,7 +88,7 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     socialMedia: {
       twitter: '@AnaheimDucks',
-      hashTags: ['#NHLDucks', '#LetsGoDucks']
+      hashTags: ['#NHLDucks', '#LetsGoDucks', '#Ducks', '#AnaheimDucks']
     }
   },
   ARI: {
@@ -100,7 +100,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Phoenix', 'Yotes', 'ARIZ', 'AZ', '@ArizonaCoyotes'],
     socialMedia: {
-      twitter: '@ArizonaCoyotes'
+      twitter: '@ArizonaCoyotes',
+      hashTags: ['#ArizonaCoyotes', '#Yotes']
     }
   },
   BOS: {
@@ -113,7 +114,7 @@ const teams: Teams = {
     terms: ['Bears'],
     socialMedia: {
       twitter: '@NHLBruins',
-      hashTags: ['#LetsGoBruins']
+      hashTags: ['#LetsGoBruins', '#BostonBruins', '#Bruins']
     }
   },
   BUF: {
@@ -126,7 +127,7 @@ const teams: Teams = {
     terms: ['Sabers'],
     socialMedia: {
       twitter: '@BuffaloSabres',
-      hashTags: ['#LetsGoBuffalo']
+      hashTags: ['#LetsGoBuffalo', '#BuffaloSabres', '#Sabres']
     }
   },
   CAR: {
@@ -138,7 +139,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Canes'],
     socialMedia: {
-      twitter: '@NHLCanes'
+      twitter: '@NHLCanes',
+      hashTags: ['#Canes', '#CarolinaHurricanes']
     }
   },
   CBJ: {
@@ -151,7 +153,7 @@ const teams: Teams = {
     terms: ['Jackets', 'CLB'],
     socialMedia: {
       twitter: '@BlueJacketsNHL',
-      hashTags: ['#CBJ']
+      hashTags: ['#CBJ', '#ColumbusBlueJackets', '#BlueJackets']
     }
   },
   CGY: {
@@ -163,7 +165,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['CAL'],
     socialMedia: {
-      twitter: '@NHLFlames'
+      twitter: '@NHLFlames',
+      hashTags: ['#CalgaryFlames', '#Flames']
     }
   },
   CHI: {
@@ -176,7 +179,7 @@ const teams: Teams = {
     terms: ['Hawks'],
     socialMedia: {
       twitter: '@NHLBlackhawks',
-      hashTags: ['#OneGoal']
+      hashTags: ['#OneGoal', '#ChicagoBlackhawks', '#Blackhawks']
     }
   },
   COL: {
@@ -186,9 +189,10 @@ const teams: Teams = {
     abbreviation: 'COL',
     primaryColor: '#6F263D',
     textColor: '#FFFFFF',
-    terms: [],
+    terms: ['Avs'],
     socialMedia: {
-      twitter: ''
+      twitter: '@Avalanche',
+      hashTags: ['#GoAvsGo', '#Avs', '#ColoradoAvalanche', '#Avalanche']
     }
   },
   DAL: {
@@ -198,9 +202,10 @@ const teams: Teams = {
     abbreviation: 'DAL',
     primaryColor: '#006341',
     textColor: '#FFFFFF',
-    terms: ['Hawks'],
+    terms: ['Stars'],
     socialMedia: {
-      twitter: '@DallasStars'
+      twitter: '@DallasStars',
+      hashTags: ['#GoStars', '#Stars', '#DallasStars']
     }
   },
   DET: {
@@ -213,7 +218,7 @@ const teams: Teams = {
     terms: ['Wings'],
     socialMedia: {
       twitter: '@DetroitRedWings',
-      hashTags: ['#LGRW']
+      hashTags: ['#LGRW', '#Wings', '#DetroitRedWings', '#RedWings']
     }
   },
   EDM: {
@@ -226,7 +231,7 @@ const teams: Teams = {
     terms: ['Oil'],
     socialMedia: {
       twitter: '@EdmontonOilers',
-      hashTags: ['#OilCountry']
+      hashTags: ['#OilCountry', '#Oilers', '#EdmontonOilers']
     }
   },
   FLA: {
@@ -239,7 +244,12 @@ const teams: Teams = {
     terms: ['Cats'],
     socialMedia: {
       twitter: '@FlaPanthers',
-      hashTags: ['#FlaPanthers', '#OneTerritory']
+      hashTags: [
+        '#FlaPanthers',
+        '#OneTerritory',
+        '#Panthers',
+        '#FloridaPanthers'
+      ]
     }
   },
   LAK: {
@@ -251,7 +261,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['LA', 'LA Kings', 'LAKings'],
     socialMedia: {
-      twitter: '@LAKings'
+      twitter: '@LAKings',
+      hashTags: ['#Kings', '#LAKings']
     }
   },
   MIN: {
@@ -264,7 +275,7 @@ const teams: Teams = {
     terms: ['minny', 'mnwild'],
     socialMedia: {
       twitter: '@mnwild',
-      hashTags: ['#OurIce']
+      hashTags: ['#OurIce', '#MinnesotaWild', '#mnwild']
     }
   },
   MTL: {
@@ -277,7 +288,14 @@ const teams: Teams = {
     terms: ['Canadians', 'Habs', 'MON', 'Montreal'],
     socialMedia: {
       twitter: '@CanadiensMTL',
-      hashTags: ['#GoHabsGo']
+      hashTags: [
+        '#GoHabsGo',
+        '#Habs',
+        '#MontrealCanadiens',
+        '#MontrealCanadians',
+        '#Canadians',
+        '#Canadiens'
+      ]
     }
   },
   NJD: {
@@ -290,7 +308,7 @@ const teams: Teams = {
     terms: [],
     socialMedia: {
       twitter: '@NJDevils',
-      hashTags: ['#NJDevils']
+      hashTags: ['#NJDevils', '#Devils', '#NewJerseyDevils']
     }
   },
   NSH: {
@@ -303,7 +321,7 @@ const teams: Teams = {
     terms: ['Preds'],
     socialMedia: {
       twitter: '@PredsNHL',
-      hashTags: ['#Smashville']
+      hashTags: ['#Smashville', '#Preds', '#NashvillePredators']
     }
   },
   NYI: {
@@ -316,7 +334,13 @@ const teams: Teams = {
     terms: ['Isles', 'Island'],
     socialMedia: {
       twitter: '@NYIslanders',
-      hashTags: ['#Isles']
+      hashTags: [
+        '#Isles',
+        '#Islanders',
+        '#NYIslanders',
+        '#NewYorkIslanders',
+        '#NYI'
+      ]
     }
   },
   NYR: {
@@ -328,7 +352,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Rags'],
     socialMedia: {
-      twitter: '@NYRangers'
+      twitter: '@NYRangers',
+      hashTags: ['#Rangers', '#NYR', '#NYRangers', '#NewYorkRangers']
     }
   },
   OTT: {
@@ -340,7 +365,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: ['Sens'],
     socialMedia: {
-      twitter: '@Senators'
+      twitter: '@Senators',
+      hashTags: ['#Sens', '#OttawaSenators', '#Senators']
     }
   },
   PHI: {
@@ -352,7 +378,8 @@ const teams: Teams = {
     textColor: '#FFFFFF',
     terms: [],
     socialMedia: {
-      twitter: '@NHLFlyers'
+      twitter: '@NHLFlyers',
+      hashTags: ['#Flyers', '#PhiladelphiaFlyers']
     }
   },
   PIT: {
@@ -365,7 +392,7 @@ const teams: Teams = {
     terms: ['Pens'],
     socialMedia: {
       twitter: '@penguins',
-      hashTags: ['#LetsGoPens']
+      hashTags: ['#LetsGoPens', '#Pens', '#PittsburghPenguins', '#Penguins']
     }
   },
   SJS: {
@@ -378,7 +405,7 @@ const teams: Teams = {
     terms: [],
     socialMedia: {
       twitter: '@SanJoseSharks',
-      hashTags: ['#SJSharks']
+      hashTags: ['#SJSharks', '#Sharks', '#SanJoseSharks']
     }
   },
   STL: {
@@ -391,7 +418,7 @@ const teams: Teams = {
     terms: ['Notes', 'St Louis Blues'],
     socialMedia: {
       twitter: '@StLouisBlues',
-      hashTags: ['#stlblues', '#WeAllBleedBlue']
+      hashTags: ['#stlblues', '#WeAllBleedBlue', '#Blues', '#StLouisBlues']
     }
   },
   TBL: {
@@ -404,7 +431,7 @@ const teams: Teams = {
     terms: ['Tampa', 'Bolts', 'TB'],
     socialMedia: {
       twitter: '@TBLightning',
-      hashTags: ['#GoBolts']
+      hashTags: ['#GoBolts', '#Lightning', '#TampaBayLightning']
     }
   },
   TOR: {
@@ -417,7 +444,7 @@ const teams: Teams = {
     terms: ['Leafs'],
     socialMedia: {
       twitter: '@MapleLeafs',
-      hashTags: ['#LeafsForever']
+      hashTags: ['#LeafsForever', '#Leafs', '#MapleLeafs', '#TorontoMapleLeafs']
     }
   },
   VAN: {
@@ -430,7 +457,7 @@ const teams: Teams = {
     terms: ['Nucks'],
     socialMedia: {
       twitter: '@Canucks',
-      hashTags: ['#WeAreAllCanucks']
+      hashTags: ['#WeAreAllCanucks', '#Canucks', '#VancouverCanucks']
     }
   },
   VGK: {
@@ -443,7 +470,12 @@ const teams: Teams = {
     terms: ['Knights', 'Las Vegas'],
     socialMedia: {
       twitter: '@GoldenKnights',
-      hashTags: ['#VegasBorn']
+      hashTags: [
+        '#VegasBorn',
+        '#GoldenKnights',
+        '#VegasGoldenKnights',
+        '#Knights'
+      ]
     }
   },
   WPG: {
@@ -453,10 +485,10 @@ const teams: Teams = {
     abbreviation: 'WPG',
     primaryColor: '#041E42',
     textColor: '#FFFFFF',
-    terms: ['WIN'],
+    terms: [],
     socialMedia: {
       twitter: '@NHLJets',
-      hashTags: ['#GoJetsGo']
+      hashTags: ['#GoJetsGo', '#Jets', '#WPGJets', '#WinnipegJets']
     }
   },
   WSH: {
@@ -469,7 +501,7 @@ const teams: Teams = {
     terms: ['Washington', 'Capitals', 'WSH', 'Caps'],
     socialMedia: {
       twitter: '@Capitals',
-      hashTags: ['#ALLCAPS']
+      hashTags: ['#ALLCAPS', '#Capitals', '#Caps', '#WashingtonCapitals']
     }
   }
 }
