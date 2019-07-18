@@ -1,3 +1,6 @@
+[![npm package](https://img.shields.io/npm/v/team-finder.svg?style=for-the-badge)](https://www.npmjs.com/package/team-finder)
+[![npm downloads](https://img.shields.io/npm/dm/team-finder.svg?style=for-the-badge)](https://www.npmjs.com/package/team-finder)
+
 # team-finder
 
 Finds NHL teams that match the given term.
@@ -32,7 +35,6 @@ findTeam('Caps').abbreviation // 'WSH'
 
 // Case insensitive
 findTeam('washington', { caseSensitive: false }).teamName // 'Capitals'
-
 ```
 
 #### teams
