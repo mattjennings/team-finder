@@ -35,6 +35,11 @@ export interface Team {
   terms?: string[]
 
   /**
+   * Mispelt abbreviations used by Elliotte Friedman
+   */
+  friedmanAbbreviations?: string[]
+
+  /**
    * Social media information for the team
    */
   socialMedia?: {
@@ -163,7 +168,7 @@ const teams: Teams = {
     abbreviation: 'CGY',
     primaryColor: '#C8102E',
     textColor: '#FFFFFF',
-    terms: ['CAL'],
+    friedmanAbbreviations: ['CAL'],
     socialMedia: {
       twitter: '@NHLFlames',
       hashTags: ['#CalgaryFlames', '#Flames']
@@ -319,6 +324,7 @@ const teams: Teams = {
     primaryColor: '#FFB81C',
     textColor: '#000000',
     terms: ['Preds'],
+    friedmanAbbreviations: ['NASH'],
     socialMedia: {
       twitter: '@PredsNHL',
       hashTags: ['#Smashville', '#Preds', '#NashvillePredators']
@@ -455,6 +461,7 @@ const teams: Teams = {
     primaryColor: '#00205B',
     textColor: '#FFFFFF',
     terms: ['Nucks'],
+    friedmanAbbreviations: ['VCR'],
     socialMedia: {
       twitter: '@Canucks',
       hashTags: ['#WeAreAllCanucks', '#Canucks', '#VancouverCanucks']
@@ -468,6 +475,7 @@ const teams: Teams = {
     primaryColor: '#B4975A',
     textColor: '#FFFFFF',
     terms: ['Knights', 'Las Vegas'],
+    friedmanAbbreviations: ['LV'],
     socialMedia: {
       twitter: '@GoldenKnights',
       hashTags: [
@@ -485,7 +493,7 @@ const teams: Teams = {
     abbreviation: 'WPG',
     primaryColor: '#041E42',
     textColor: '#FFFFFF',
-    terms: [],
+    friedmanAbbreviations: ['WIN'],
     socialMedia: {
       twitter: '@NHLJets',
       hashTags: ['#GoJetsGo', '#Jets', '#WPGJets', '#WinnipegJets']

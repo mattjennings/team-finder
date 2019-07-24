@@ -71,4 +71,14 @@ describe('findTeam', () => {
       })
     })
   })
+
+  describe('Friedman', () => {
+    it('should return Calgary Flames', () => {
+      expect(findTeam('CAL', { friedman: true })).toEqual(teams.CGY)
+    })
+
+    it('should not return Calgary Flames', () => {
+      expect(findTeam('CAL')).toEqual(null)
+    })
+  })
 })

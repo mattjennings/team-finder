@@ -35,6 +35,9 @@ findTeam('Caps').abbreviation // 'WSH'
 
 // Case insensitive
 findTeam('washington', { caseSensitive: false }).teamName // 'Capitals'
+
+// Elliotte Friedman mode for his stubborn use of wrong abbreviations
+findTeam('CAL', { friedman: true }).abbreviation // 'CGY'
 ```
 
 #### teams
@@ -50,7 +53,9 @@ teams.BOS.fullName // 'Boston Bruins'
 
 #### teamDictionary
 
-A javascript object where the keys are terms (and social media info) and the values are team abbreviations. `findTeam` uses this under the hood, but you can use this if you need to pass the data somewhere else.
+An object where the keys are the terms/names/social media values, and the values are team abbreviations. `findTeam` used to use this under the hood. Will probably be removed in a later major version (3.x).
+
+(note: this does not include `friedmanAbbreviations` of teams)
 
 ```js
 import { teamDictionary } from 'team-finder'
