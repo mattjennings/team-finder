@@ -311,6 +311,7 @@ const teams: Teams = {
     primaryColor: '#C8102E',
     textColor: '#FFFFFF',
     terms: [],
+    friedmanAbbreviations: ['NJ'],
     socialMedia: {
       twitter: '@NJDevils',
       hashTags: ['#NJDevils', '#Devils', '#NewJerseyDevils']
