@@ -35,6 +35,13 @@ findTeam('Caps').abbreviation // 'WSH'
 
 // Case insensitive
 findTeam('washington', { caseSensitive: false }).teamName // 'Capitals'
+findTeam('wsh', {
+  caseSensitive: {
+    abbreviation: false,
+    teamName: true
+    cityName: true
+  }
+}).teamName // 'Capitals'
 
 // Elliotte Friedman mode for his stubborn use of wrong abbreviations
 findTeam('CAL', { friedman: true }).abbreviation // 'CGY'

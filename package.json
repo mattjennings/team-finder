@@ -1,6 +1,6 @@
 {
   "name": "team-finder",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "license": "ISC",
   "homepage": "https://github.com/mattjennings/team-finder",
   "repository": {
@@ -34,12 +34,14 @@
   "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.2",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "pretty-quick": "^1.11.1",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
@@ -48,6 +50,6 @@
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.3"
   }
 }

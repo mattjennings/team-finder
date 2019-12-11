@@ -1,10 +1,36 @@
-import teams, { NHLTeamAbbreviation } from './teams'
+import teams, { NHLTeamAbbreviation, Team } from './teams'
 
 export interface FindTeamOptions {
   /**
-   * Enables case sensitivity if true (default)
+   * Configure case sensitivity for each field, or pass a boolean for all properties.   
+      @default
+        {
+          teamName: false,
+          cityName: false,
+          fullName: false,
+          abbreviation: true,
+          terms: false,
+          friedmanAbbreviations: true,
+          socialMedia: {
+            twitter: false,
+            hashTags: false
+          }
+        }
    */
-  caseSensitive?: boolean
+  caseSensitive?:
+    | boolean
+    | {
+        cityName?: boolean
+        teamName?: boolean
+        fullName?: boolean
+        abbreviation?: boolean
+        friedmanAbbreviations?: boolean
+        socialMedia?: {
+          twitter?: boolean
+          hashTags?: boolean
+        }
+        terms?: boolean
+      }
 
   /**
    * If you want to consider Elliote Friedman's goofed up abbreviations...
@@ -39,8 +65,31 @@ function findValue(
   object: Record<string, any>,
   value: any,
   options: FindTeamOptions = {},
-  teamKey?: string
+  teamKey?: string,
+  parentKey?: string
 ): string {
+  const caseSensitive =
+    typeof options.caseSensitive === 'boolean'
+      ? options.caseSensitive
+      : {
+          teamName: false,
+          cityName: false,
+          fullName: false,
+          abbreviation: true,
+          terms: false,
+          friedmanAbbreviations: true,
+          ...(typeof options.caseSensitive === 'object'
+            ? options.caseSensitive
+            : {}),
+          socialMedia: {
+            twitter: false,
+            hashTags: false,
+            ...(options.caseSensitive?.socialMedia
+              ? options.caseSensitive.socialMedia
+              : {})
+          }
+        }
+
   const keys = Object.keys(object)
 
   for (const key of keys) {
@@ -48,14 +97,15 @@ function findValue(
       continue
     }
 
+    const fullKey = parentKey ? `${parentKey}.${key}` : key
+    const isCaseSensitive = getCaseSensitivity(fullKey, caseSensitive)
     const objVal = object[key]
 
     if (typeof objVal === 'object') {
       if (Array.isArray(objVal)) {
         // compare values of array (assuming they are strings for now)
         const foundInArray = objVal.find(val => {
-          // friedman abbreviations don't count for case-sensitivity because they can be real words (win, la)
-          if (!options.caseSensitive && key !== 'friedmanAbbreviations') {
+          if (!isCaseSensitive) {
             return val.toLowerCase() === value.toLowerCase()
           } else {
             return val === value
@@ -67,7 +117,7 @@ function findValue(
         }
       } else {
         // recursively search
-        if (findValue(objVal, value, options, teamKey || key)) {
+        if (findValue(objVal, value, options, teamKey || key, fullKey)) {
           return teamKey || key
         }
       }
@@ -75,8 +125,8 @@ function findValue(
     // compare strings
     else if (typeof objVal === 'string') {
       const isEqual =
-        (options.caseSensitive && value === objVal) ||
-        (!options.caseSensitive && value.toLowerCase() === objVal.toLowerCase())
+        (isCaseSensitive && value === objVal) ||
+        (!isCaseSensitive && value.toLowerCase() === objVal.toLowerCase())
 
       if (isEqual) {
         return teamKey || key
@@ -85,4 +135,34 @@ function findValue(
   }
 
   return null
+}
+
+function getCaseSensitivity(
+  key: string, // will be a full key in dot notation. ex. CHI.socialMedia.twitter
+  caseSensitive: FindTeamOptions['caseSensitive']
+) {
+  if (typeof caseSensitive === 'boolean' || !caseSensitive) {
+    return !!caseSensitive
+  }
+
+  const keyWithoutTeam = key
+    .split('.')
+    .slice(1)
+    .join('.')
+
+  switch (keyWithoutTeam) {
+    case 'teamName':
+    case 'cityName':
+    case 'fullName':
+    case 'abbreviation':
+    case 'friedmanAbbreviations':
+    case 'terms':
+      return caseSensitive[keyWithoutTeam] ?? true
+    case 'socialMedia.twitter':
+      return caseSensitive.socialMedia?.twitter ?? true
+    case 'socialMedia.hashTags':
+      return caseSensitive.socialMedia?.hashTags ?? true
+  }
+
+  return false
 }
