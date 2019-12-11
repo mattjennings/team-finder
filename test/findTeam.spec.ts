@@ -80,5 +80,13 @@ describe('findTeam', () => {
     it('should not return Calgary Flames', () => {
       expect(findTeam('CAL')).toEqual(null)
     })
+
+    it('should not detect "win" as WPG', () => {
+      expect(findTeam('win', { friedman: true })).toEqual(null)
+    })
+
+    it('should detect "WIN" as WPG', () => {
+      expect(findTeam('WIN', { friedman: true })).toEqual(teams.WPG)
+    })
   })
 })

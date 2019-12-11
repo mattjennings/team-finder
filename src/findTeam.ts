@@ -54,10 +54,11 @@ function findValue(
       if (Array.isArray(objVal)) {
         // compare values of array (assuming they are strings for now)
         const foundInArray = objVal.find(val => {
-          if (options.caseSensitive) {
-            return val === value
-          } else {
+          // friedman abbreviations don't count for case-sensitivity because they can be real words (win, la)
+          if (!options.caseSensitive && key !== 'friedmanAbbreviations') {
             return val.toLowerCase() === value.toLowerCase()
+          } else {
+            return val === value
           }
         })
 
