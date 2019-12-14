@@ -410,6 +410,7 @@ const teams: Teams = {
     primaryColor: '#006272',
     textColor: '#FFFFFF',
     terms: [],
+    friedmanAbbreviations: ['SJ'],
     socialMedia: {
       twitter: '@SanJoseSharks',
       hashTags: ['#SJSharks', '#Sharks', '#SanJoseSharks']
