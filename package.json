@@ -1,6 +1,6 @@
 {
   "name": "team-finder",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "license": "ISC",
   "homepage": "https://github.com/mattjennings/team-finder",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "description": "Finds NHL teams based on given text",
   "main": "dist/index.js",
-  "module": "dist/testlib.esm.js",
+  "module": "dist/team-finder.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -31,7 +31,7 @@
     "finder",
     "identifier"
   ],
-  "author": "Matt Jennings <mattjennings44@gmail.com> (http://mattjennings.me)",
+  "author": "Matt Jennings <matt@mattjennings.io> (https://mattjennings.io)",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
