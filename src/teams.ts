@@ -72,6 +72,7 @@ export type NHLTeamAbbreviation =
   | 'OTT'
   | 'PHI'
   | 'PIT'
+  | 'SEA'
   | 'SJS'
   | 'STL'
   | 'TBL'
@@ -400,6 +401,18 @@ const teams: Teams = {
     socialMedia: {
       twitter: '@penguins',
       hashTags: ['#LetsGoPens', '#Pens', '#PittsburghPenguins', '#Penguins']
+    }
+  },
+  SEA: {
+    cityName: 'Seattle',
+    teamName: 'Kraken',
+    fullName: 'Seattle Kraken',
+    abbreviation: 'SEA',
+    primaryColor: '#001628',
+    textColor: '#FFFFFF',
+    socialMedia: {
+      twitter: '@SeattleKraken',
+      hashTags: ['#Kraken', '#SeaKraken']
     }
   },
   SJS: {
